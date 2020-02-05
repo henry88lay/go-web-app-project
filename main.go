@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -18,7 +19,6 @@ func contact(w http.ResponseWriter, r *http.Request)  {
 }
 
 func main() {
-	template.New("blah")
 	r := mux.NewRouter()
 	r.HandleFunc("/", home)
 	r.HandleFunc("/contact", contact)
